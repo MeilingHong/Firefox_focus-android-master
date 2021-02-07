@@ -1,0 +1,6 @@
+/build
+
+src/webview/res/raw/*.json
+src/main/res/raw/*.json
+
+src/main/java/org/mozilla/focus/generated/
