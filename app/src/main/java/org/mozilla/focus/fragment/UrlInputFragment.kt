@@ -291,7 +291,7 @@ class UrlInputFragment :
     }
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?):
-        View? = inflater.inflate(R.layout.fragment_urlinput, container, false)
+        View? = inflater.inflate(R.layout.fragment_urlinput, container, false)// todo 地址栏输入框Fragment
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         listOf(dismissView, clearView).forEach { it.setOnClickListener(this) }

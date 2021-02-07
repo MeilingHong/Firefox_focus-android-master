@@ -42,7 +42,7 @@ class FirstrunFragment : Fragment(), View.OnClickListener {
 
     @Suppress("MagicNumber")
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        val view = inflater.inflate(R.layout.fragment_firstrun, container, false)
+        val view = inflater.inflate(R.layout.fragment_firstrun, container, false)// todo 首次运行显示的引导页面
 
         view.findViewById<View>(R.id.skip).setOnClickListener(this)
 

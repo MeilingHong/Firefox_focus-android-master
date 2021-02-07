@@ -255,14 +255,14 @@ open class MainActivity : LocaleAwareAppCompatActivity() {
         // https://github.com/mozilla-mobile/android-components/issues/876
         transaction
                 .replace(R.id.container, UrlInputFragment.createWithoutSession(), UrlInputFragment.FRAGMENT_TAG)
-                .commitAllowingStateLoss()
+                .commitAllowingStateLoss()// todo 显示输入地址栏的页面
     }
 
     private fun showFirstrun(currentSession: Session? = null) {
         supportFragmentManager
                 .beginTransaction()
                 .add(R.id.container, FirstrunFragment.create(currentSession), FirstrunFragment.FRAGMENT_TAG)
-                .commit()
+                .commit()// todo
     }
 
     protected fun showBrowserScreenForCurrentSession() {
