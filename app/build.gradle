@@ -70,6 +70,8 @@ android {
             applicationIdSuffix ".klar"
         }
 
+
+        // todo 注释掉ndk后不再限制对应CPU架构的机型
         arm {
             dimension "abi"
 //            ndk {
