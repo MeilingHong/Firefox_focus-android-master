@@ -233,7 +233,7 @@ class BrowserFragment : WebFragment(), LifecycleObserver, View.OnClickListener,
             pendingDownload = savedInstanceState.getParcelable(RESTORE_KEY_DOWNLOAD)
         }
 
-        val view = inflater.inflate(R.layout.fragment_browser, container, false)
+        val view = inflater.inflate(R.layout.fragment_browser, container, false)// todo 浏览器UI布局
 
         videoContainer = view.findViewById<View>(R.id.video_container) as ViewGroup
         browserContainer = view.findViewById(R.id.browser_container)
@@ -1235,8 +1235,8 @@ class BrowserFragment : WebFragment(), LifecycleObserver, View.OnClickListener,
 
     fun goBack() = getWebView()?.goBack()
 
-    fun loadUrl(url: String) {
-        val webView = getWebView()
+    fun loadUrl(url: String) {// todo 加载指定的链接地址
+        val webView = getWebView()// todo 继承自WebFragment，可用于加载链接
         if (webView != null && !TextUtils.isEmpty(url)) {
             webView.loadUrl(url)
         }

@@ -55,8 +55,8 @@ abstract class WebFragment : LocaleAwareFragment() {
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val view = inflateLayout(inflater, container, savedInstanceState)
 
-        val actualWebView = view.findViewById<View>(R.id.webview)
-        webViewInstance = actualWebView as IWebView
+        val actualWebView = view.findViewById<View>(R.id.webview)// todo 实现的子类中的WebView【指定的子类布局文件中WebView的id（不可修改）】
+        webViewInstance = actualWebView as IWebView// todo 将布局中的View进行实例化【接口对象视图组件化（强制类型转换）】；
 
         isWebViewAvailable = true
         webViewInstance!!.setCallback(createCallback())
@@ -131,7 +131,7 @@ abstract class WebFragment : LocaleAwareFragment() {
         super.onDestroyView()
     }
 
-    protected fun getWebView(): IWebView? {
+    protected fun getWebView(): IWebView? {// todo 获取WebView实例对象
         return if (isWebViewAvailable) webViewInstance else null
     }
 
