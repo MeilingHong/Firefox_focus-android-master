@@ -759,10 +759,11 @@ class UrlInputFragment :
         val browserFragment = fragmentManager.findFragmentByTag(BrowserFragment.FRAGMENT_TAG)
 
         if (browserFragment != null && browserFragment is BrowserFragment && browserFragment.isVisible) {
+            // todo 当链接输入完毕后，
             // Reuse existing visible fragment - in this case we know the user is already browsing.
             // The fragment might exist if we "erased" a browsing session, hence we need to check
             // for visibility in addition to existence.
-            browserFragment.loadUrl(url)
+            browserFragment.loadUrl(url)// todo 加载地址对应的网页，并进行显示
 
             // And this fragment can be removed again.
             fragmentManager.beginTransaction()
